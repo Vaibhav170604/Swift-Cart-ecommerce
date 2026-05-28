@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover premium electronics, clothing, shoes, watches, and accessories at SwiftCart. Sleek, fast, and modern shopping experience.">
+  <title>SwiftCart | Premium Modern E-Commerce</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Reusable Styling -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p>Free standard shipping on orders over $50. Shop the new season now!</p>
+  </div>
+
+  <!-- Header & Navbar -->
+  <header class="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo" id="nav-logo">
+        Swift<span>Cart</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="#shop" class="nav-link">Shop</a></li>
+          <li><a href="#categories" class="nav-link">Categories</a></li>
+          <li><a href="#" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+
+      <!-- Navbar Actions -->
+      <div class="nav-actions">
+        <a href="login.html" class="nav-icon" id="auth-link" title="Account">
+          <i class="fa-regular fa-user"></i>
+        </a>
+        <button class="nav-icon theme-toggle" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <a href="cart.html" class="nav-icon cart-icon-wrapper" id="cart-link" title="Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count" id="cart-badge">0</span>
+        </a>
+        <a href="wishlist.html" class="nav-icon wishlist-icon-wrapper" id="wishlist-link" title="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="wishlist-count" id="wishlist-badge">0</span>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <span class="hero-tagline">New Arrivals 2026</span>
+        <h1 class="hero-title">Redefining Modern Shopping</h1>
+        <p class="hero-subtitle">Explore our handpicked collection of premium shoes, electronics, apparel, and accessories designed for the modern lifestyle.</p>
+        <div class="hero-buttons">
+          <a href="#shop" class="btn btn-primary">Shop Collection <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#categories" class="btn btn-outline">Browse Categories</a>
+        </div>
+      </div>
+      <div class="hero-image-container">
+        <div class="hero-image-bg-glow"></div>
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80" alt="Premium Sneakers Hero Product" class="hero-image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Strip -->
+  <section class="features-strip">
+    <div class="container grid grid-4">
+      <div class="feature-item">
+        <i class="fa-solid fa-truck-fast"></i>
+        <div>
+          <h3>Free Shipping</h3>
+          <p>On all orders over $50</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <i class="fa-solid fa-rotate-left"></i>
+        <div>
+          <h3>30-Day Returns</h3>
+          <p>Hassle-free return policy</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <i class="fa-solid fa-lock"></i>
+        <div>
+          <h3>Secure Checkout</h3>
+          <p>100% encrypted payments</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <i class="fa-solid fa-headset"></i>
+        <div>
+          <h3>24/7 Support</h3>
+          <p>Dedicated support team</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="categories-section" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Shop by Category</h2>
+        <p class="section-subtitle">Find exactly what you're looking for across our popular curation.</p>
+      </div>
+      <div class="categories-grid">
+        <div class="category-card" data-category="shoes">
+          <div class="category-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80" alt="Shoes Category">
+          </div>
+          <div class="category-info">
+            <h3>Shoes</h3>
+            <span>Explore Collection</span>
+          </div>
+        </div>
+        <div class="category-card" data-category="electronics">
+          <div class="category-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80" alt="Electronics Category">
+          </div>
+          <div class="category-info">
+            <h3>Electronics</h3>
+            <span>Explore Collection</span>
+          </div>
+        </div>
+        <div class="category-card" data-category="clothing">
+          <div class="category-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=500&q=80" alt="Clothing Category">
+          </div>
+          <div class="category-info">
+            <h3>Clothing</h3>
+            <span>Explore Collection</span>
+          </div>
+        </div>
+        <div class="category-card" data-category="watches">
+          <div class="category-image-wrapper">
+            <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=500&q=80" alt="Watches Category">
+          </div>
+          <div class="category-info">
+            <h3>Watches</h3>
+            <span>Explore Collection</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="products-section" id="shop">
+    <div class="container">
+      <div class="section-header-flex">
+        <div class="section-header">
+          <h2 class="section-title">Featured Products</h2>
+          <p class="section-subtitle">Top products handpicked for quality and modern aesthetics.</p>
+        </div>
+        <!-- Category Filters -->
+        <div class="filter-container">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="shoes">Shoes</button>
+          <button class="filter-btn" data-filter="electronics">Electronics</button>
+          <button class="filter-btn" data-filter="clothing">Clothing</button>
+          <button class="filter-btn" data-filter="watches">Watches</button>
+          <button class="filter-btn" data-filter="accessories">Accessories</button>
+        </div>
+      </div>
+
+      <!-- Search & Sort Toolbar -->
+      <div class="catalog-toolbar">
+        <div class="catalog-search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <input
+            type="search"
+            id="product-search"
+            class="catalog-search-input"
+            placeholder="Search products..."
+            autocomplete="off"
+            aria-label="Search products by name or category"
+          >
+          <button type="button" class="search-clear" id="search-clear" hidden aria-label="Clear search">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="catalog-sort">
+          <label for="product-sort" class="catalog-sort-label">Sort</label>
+          <select id="product-sort" class="catalog-select" aria-label="Sort products by price">
+            <option value="default">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+      <p class="catalog-results" id="catalog-results" aria-live="polite"></p>
+
+      <!-- Product Cards Grid -->
+      <div class="product-grid" id="product-grid">
+        <!-- Rendered dynamically by JavaScript -->
+        <div class="ui-loading-skeleton">
+          <!-- Skeletons will appear here momentarily -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Swift<span>Cart</span></a>
+        <p>A premium modern e-commerce solution offering the highest quality goods. Experience retail re-engineered.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="#shop">All Products</a></li>
+          <li><a href="#shop">Featured</a></li>
+          <li><a href="#shop">New Arrivals</a></li>
+          <li><a href="#shop">Discounts</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h3>Stay Connected</h3>
+        <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="Enter your email" required aria-label="Email address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 SwiftCart. All rights reserved.</p>
+        <div class="payment-methods">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-brands fa-cc-paypal"></i>
+          <i class="fa-brands fa-cc-apple-pay"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Files -->
+  <script src="js/toastService.js"></script>
+  <script src="js/uiHelpers.js"></script>
+  <script src="js/cartService.js"></script>
+  <script src="js/wishlistService.js"></script>
+  <script src="js/productCatalog.js"></script>
+  <script src="js/authGuard.js"></script>
+  <script src="js/authSession.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

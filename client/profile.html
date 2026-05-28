@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Manage your SwiftCart account, profile, and preferences.">
+  <title>SwiftCart | My Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="announcement-bar">
+    <p>Free standard shipping on orders over $50. Shop the new season now!</p>
+  </div>
+
+  <header class="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">Swift<span>Cart</span></a>
+      <nav class="nav-menu" id="nav-menu" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#shop">Shop</a></li>
+          <li><a href="orders.html">My Orders</a></li>
+          <li><a href="profile.html" class="active">Profile</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="nav-icon" id="auth-link" title="Account" aria-label="Account menu">
+          <i class="fa-regular fa-user" aria-hidden="true"></i>
+        </a>
+        <button class="nav-icon theme-toggle" id="theme-toggle" title="Toggle Theme" aria-label="Toggle dark mode">
+          <i class="fa-regular fa-moon" aria-hidden="true"></i>
+        </button>
+        <a href="cart.html" class="nav-icon cart-icon-wrapper" title="Cart" aria-label="Shopping cart">
+          <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+          <span class="cart-count" id="cart-badge" aria-live="polite">0</span>
+        </a>
+        <a href="wishlist.html" class="nav-icon wishlist-icon-wrapper" title="Wishlist" aria-label="Wishlist">
+          <i class="fa-regular fa-heart" aria-hidden="true"></i>
+          <span class="wishlist-count" id="wishlist-badge" aria-live="polite">0</span>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="profile-section">
+    <div class="container" id="profile-root">
+      <div class="ui-state ui-state--loading" role="status">
+        <div class="ui-spinner"><i class="fa-solid fa-circle-notch fa-spin" aria-hidden="true"></i></div>
+        <p>Loading your account...</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer checkout-footer">
+    <div class="container footer-bottom-flex">
+      <p>&copy; 2026 SwiftCart. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/toastService.js"></script>
+  <script src="js/uiHelpers.js"></script>
+  <script src="js/cartService.js"></script>
+  <script src="js/orderService.js"></script>
+  <script src="js/orderModal.js"></script>
+  <script src="js/profileService.js"></script>
+  <script src="js/authGuard.js"></script>
+  <script src="js/authSession.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

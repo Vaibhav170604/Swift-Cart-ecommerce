@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign in to your SwiftCart account to manage orders, track shipments, and enjoy a personalized shopping experience.">
+  <title>SwiftCart | Sign In</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo">Swift<span>Cart</span></a>
+      <div class="nav-actions">
+        <button class="nav-icon theme-toggle" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <a href="cart.html" class="nav-icon cart-icon-wrapper" title="Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count" id="cart-badge">0</span>
+        </a>
+        <a href="wishlist.html" class="nav-icon wishlist-icon-wrapper" title="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="wishlist-count" id="wishlist-badge">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Auth Section -->
+  <main class="auth-section">
+    <div class="auth-container">
+
+      <!-- Left Panel — Brand Showcase -->
+      <div class="auth-brand-panel">
+        <div class="auth-brand-content">
+          <a href="index.html" class="logo auth-logo">Swift<span>Cart</span></a>
+          <h2>Welcome Back</h2>
+          <p>Sign in to access your orders, saved items, and a personalized shopping experience crafted just for you.</p>
+          <ul class="auth-perks">
+            <li><i class="fa-solid fa-circle-check"></i> Track your orders in real time</li>
+            <li><i class="fa-solid fa-circle-check"></i> Save your favorite items</li>
+            <li><i class="fa-solid fa-circle-check"></i> Faster checkout experience</li>
+            <li><i class="fa-solid fa-circle-check"></i> Exclusive member-only deals</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Panel — Login Form -->
+      <div class="auth-form-panel">
+        <div class="auth-form-container">
+          <div class="auth-form-header">
+            <h1>Sign In</h1>
+            <p>Don't have an account? <a href="register.html">Create one</a></p>
+          </div>
+
+          <!-- Alert Box -->
+          <div class="auth-alert" id="auth-alert" role="alert" aria-live="polite"></div>
+
+          <form class="auth-form" id="login-form" novalidate>
+            <div class="form-group">
+              <label for="login-email" class="form-label">Email Address</label>
+              <div class="input-wrapper">
+                <i class="fa-regular fa-envelope input-icon"></i>
+                <input
+                  type="email"
+                  id="login-email"
+                  name="email"
+                  class="form-input"
+                  placeholder="you@example.com"
+                  autocomplete="email"
+                  required
+                >
+              </div>
+              <span class="field-error" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="login-password" class="form-label">Password</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-lock input-icon"></i>
+                <input
+                  type="password"
+                  id="login-password"
+                  name="password"
+                  class="form-input"
+                  placeholder="Enter your password"
+                  autocomplete="current-password"
+                  required
+                >
+                <button type="button" class="password-toggle" id="toggle-password" aria-label="Toggle password visibility">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+              <span class="field-error" id="password-error"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary auth-submit-btn" id="login-btn">
+              Sign In
+            </button>
+          </form>
+
+          <p class="auth-divider"><span>or continue with</span></p>
+
+          <div class="auth-social-btns">
+            <button class="btn btn-outline social-btn" id="google-login-btn">
+              <i class="fa-brands fa-google"></i> Google
+            </button>
+            <button class="btn btn-outline social-btn" disabled>
+              <i class="fa-brands fa-github"></i> GitHub
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="js/toastService.js"></script>
+  <script src="js/cartService.js"></script>
+  <script src="js/authSession.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

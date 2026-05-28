@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View and manage your wishlist items at SwiftCart. Save your favorite products and move them to cart when ready to purchase.">
+  <title>SwiftCart | Wishlist</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Reusable Styling -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p>Free standard shipping on orders over $50. Shop the new season now!</p>
+  </div>
+
+  <!-- Header & Navbar -->
+  <header class="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo" id="nav-logo">
+        Swift<span>Cart</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#shop">Shop</a></li>
+          <li><a href="index.html#categories">Categories</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+
+      <!-- Navbar Actions -->
+      <div class="nav-actions">
+        <a href="login.html" class="nav-icon" id="auth-link" title="Account">
+          <i class="fa-regular fa-user"></i>
+        </a>
+        <button class="nav-icon theme-toggle" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <a href="cart.html" class="nav-icon cart-icon-wrapper" id="cart-link" title="Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count" id="cart-badge">0</span>
+        </a>
+        <a href="wishlist.html" class="nav-icon wishlist-icon-wrapper active" id="wishlist-link" title="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="wishlist-count" id="wishlist-badge">0</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Wishlist Section -->
+  <main class="wishlist-section">
+    <div class="container">
+      <div class="wishlist-header">
+        <h1>My Wishlist</h1>
+        <p class="wishlist-subtitle">Your saved items, ready when you are</p>
+        <div class="wishlist-actions">
+          <button class="btn btn-outline" id="clear-wishlist-btn" style="display: none;">
+            <i class="fa-regular fa-trash-can"></i> Clear All
+          </button>
+        </div>
+      </div>
+
+      <!-- Loading State -->
+      <div class="wishlist-loading" id="wishlist-loading">
+        <div class="spinner"></div>
+        <p>Loading your wishlist...</p>
+      </div>
+       
+      <!-- Empty State -->
+      <div class="wishlist-empty" id="wishlist-empty" style="display: none;">
+        <div class="empty-icon">
+          <i class="fa-regular fa-heart"></i>
+        </div>
+        <h2>Your wishlist is empty</h2>
+        <p>Save items you love by clicking the heart icon on any product.</p>
+        <a href="index.html#shop" class="btn btn-primary">
+          <i class="fa-solid fa-arrow-right"></i> Start Shopping
+        </a>
+      </div>
+
+      <!-- Wishlist Items Grid -->
+      <div class="wishlist-grid" id="wishlist-grid" style="display: none;">
+        <!-- Wishlist items will be dynamically inserted here -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Swift<span>Cart</span></a>
+        <p>Premium shopping experience with modern design and seamless functionality.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#shop">Shop</a></li>
+          <li><a href="index.html#categories">Categories</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Customer Service</h3>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping Info</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2024 SwiftCart. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/toastService.js"></script>
+  <script src="js/cartService.js"></script>
+  <script src="js/wishlistService.js"></script>
+  <script src="js/wishlist.js"></script>
+</body>
+</html>

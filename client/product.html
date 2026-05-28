@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore product details, specifications, and customer reviews on SwiftCart. Premium quality guaranteed.">
+  <title>SwiftCart | Product Details</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Reusable Styling -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p>Free standard shipping on orders over $50. Shop the new season now!</p>
+  </div>
+
+  <!-- Header & Navbar -->
+  <header class="main-header">
+    <div class="container navbar">
+      <a href="index.html" class="logo" id="nav-logo">
+        Swift<span>Cart</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#shop">Shop</a></li>
+          <li><a href="index.html#categories">Categories</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+
+      <!-- Navbar Actions -->
+      <div class="nav-actions">
+        <a href="login.html" class="nav-icon" id="auth-link" title="Account">
+          <i class="fa-regular fa-user"></i>
+        </a>
+        <button class="nav-icon theme-toggle" id="theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">
+          <i class="fa-regular fa-moon"></i>
+        </button>
+        <a href="cart.html" class="nav-icon cart-icon-wrapper" id="cart-link" title="Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-count" id="cart-badge">0</span>
+        </a>
+        <a href="wishlist.html" class="nav-icon wishlist-icon-wrapper" id="wishlist-link" title="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="wishlist-count" id="wishlist-badge">0</span>
+        </a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Details Display -->
+  <main class="product-details-section">
+    <div class="container" id="product-details-target">
+      <!-- Loading Skeletons or Dynamic Product Content -->
+      <div class="ui-loading-spinner" style="text-align: center; padding: 5rem 0;">
+        <i class="fa-solid fa-circle-notch fa-spin" style="font-size: 3rem; color: var(--accent-color);"></i>
+        <p style="margin-top: 1rem; color: var(--text-muted);">Fetching product details...</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Related Products Section -->
+  <section class="related-products-section">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <h2 class="section-title" style="font-size: 1.8rem;">Related Products</h2>
+        <p class="section-subtitle">You might also like these curation choices.</p>
+      </div>
+      <div class="product-grid" id="related-grid">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Swift<span>Cart</span></a>
+        <p>A premium modern e-commerce solution offering the highest quality goods. Experience retail re-engineered.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="index.html#shop">All Products</a></li>
+          <li><a href="index.html#shop">Featured</a></li>
+          <li><a href="index.html#shop">New Arrivals</a></li>
+          <li><a href="index.html#shop">Discounts</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h3>Stay Connected</h3>
+        <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" placeholder="Enter your email" required aria-label="Email address">
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p>&copy; 2026 SwiftCart. All rights reserved.</p>
+        <div class="payment-methods">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-brands fa-cc-paypal"></i>
+          <i class="fa-brands fa-cc-apple-pay"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Files -->
+  <script src="js/toastService.js"></script>
+  <script src="js/cartService.js"></script>
+  <script src="js/authGuard.js"></script>
+  <script src="js/authSession.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>
