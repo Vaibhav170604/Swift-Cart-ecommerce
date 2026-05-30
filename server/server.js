@@ -9,7 +9,7 @@ const authRoutes = require('./routes/authRoutes');
 const cartRoutes = require('./routes/cartRoutes');
 const orderRoutes = require('./routes/orderRoutes');
 const wishlistRoutes = require('./routes/wishlistRoutes');
-
+const paymentRoutes = require('./routes/paymentRoutes');
 // Connect to Database
 connectDB();
 
@@ -40,6 +40,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/cart', cartRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/wishlist', wishlistRoutes);
+app.use('/api/payment', paymentRoutes);
 
 // Basic Route for testing
 app.get('/', (req, res) => {
