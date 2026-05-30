@@ -47,4 +47,22 @@ window.PaymentService = {
 
     return data.order;
   },
+   async verifyPayment(paymentData) {
+    const response = await fetch(
+      `${this.API_URL}/verify`,
+      {
+        method: 'POST',
+        headers: this.getAuthHeaders(),
+        body: JSON.stringify(paymentData),
+      }
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(data.message);
+    }
+
+    return data;
+  },
 };

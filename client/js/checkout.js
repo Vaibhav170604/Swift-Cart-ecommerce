@@ -289,6 +289,37 @@ async function handlePlaceOrder(e) {
   btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Processing...';
 
   try {
+        const totals = await PaymentService.getCheckoutSummary();
+
+        console.log('Checkout Totals:', totals);
+
+        const razorpayOrder =
+          await PaymentService.createPaymentOrder(
+            totals.totalAmount
+          );
+        
+
+        console.log('Razorpay Order:', razorpayOrder);
+       const options = {
+              key: 'rzp_test_SvEv6ujfaE7eXD',
+              amount: razorpayOrder.amount,
+              currency: razorpayOrder.currency,
+              name: 'Swift Cart',
+              description: 'Order Payment',
+              order_id: razorpayOrder.id,
+
+  handler: async function (response) {
+  try {
+    console.log('Payment Success:', response);
+
+    const verification =
+      await PaymentService.verifyPayment(response);
+
+    console.log(
+      'Verification Result:',
+      verification
+    );
+
     const order = await OrderService.createOrder({
       address,
       city,
@@ -298,7 +329,39 @@ async function handlePlaceOrder(e) {
 
     await CartService.syncBadge();
 
-    window.location.href = `checkout.html?success=${order._id}`;
+    ToastService.success(
+      'Payment successful'
+    );
+
+    window.location.href =
+      `checkout.html?success=${order._id}`;
+  } catch (error) {
+    console.error(error);
+
+    ToastService.error(
+      error.message || 'Payment failed'
+    );
+  }
+},  
+
+              prefill: {
+                name: 'Customer',
+                email: '',
+                contact: '',
+              },
+
+              theme: {
+                color: '#3399cc',
+              },
+            };
+
+            const rzp = new Razorpay(options);
+
+            rzp.open();
+        btn.disabled = false;
+        btn.innerHTML = originalHtml;
+
+        ToastService.success('Razorpay order created successfully');
   } catch (error) {
       ToastService.error(error.message);
     btn.disabled = false;
