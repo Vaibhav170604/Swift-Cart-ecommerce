@@ -63,10 +63,16 @@ function initCheckoutNavbar() {
 function renderLoading() {
   const root = document.getElementById('checkout-root');
   if (!root) return;
-  root.innerHTML =
-    typeof PageUI !== 'undefined'
-      ? PageUI.loadingHTML('Loading checkout...')
-      : `<div class="checkout-loading"><i class="fa-solid fa-circle-notch fa-spin"></i><p>Loading checkout...</p></div>`;
+  root.innerHTML = `
+    <div class="checkout-loading">
+      <div class="checkout-loading-spinner">
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+        <div class="spinner-ring"></div>
+      </div>
+      <p>Loading checkout...</p>
+    </div>
+  `;
 }
 
 async function loadCheckoutPage() {
@@ -102,11 +108,15 @@ function renderEmptyCheckout() {
 function renderCheckoutError() {
   const root = document.getElementById('checkout-root');
   root.innerHTML = `
-    <div class="checkout-empty">
-      <i class="fa-solid fa-circle-exclamation"></i>
+    <div class="checkout-error-card">
+      <div class="checkout-error-icon">
+        <i class="fa-solid fa-circle-exclamation"></i>
+      </div>
       <h2>Could not load checkout</h2>
       <p>Please check your connection and try again.</p>
-      <button class="btn btn-primary" onclick="loadCheckoutPage()">Retry</button>
+      <button class="btn btn-primary" onclick="loadCheckoutPage()">
+        <i class="fa-solid fa-rotate-right"></i> Retry
+      </button>
     </div>
   `;
 }
@@ -162,6 +172,56 @@ function renderCheckoutForm(items) {
             <input type="text" id="country" name="country" class="form-input checkout-input" placeholder="United States" required>
             <span class="field-error" id="country-error"></span>
           </div>
+          
+          <!-- Payment Section -->
+          <div class="checkout-payment-section">
+            <h3><i class="fa-solid fa-credit-card"></i> Payment Method</h3>
+            <div class="payment-method-card">
+              <div class="payment-method-header">
+                <div class="payment-method-icon">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div class="payment-method-info">
+                  <span class="payment-method-title">Razorpay Secure Payment</span>
+                  <span class="payment-method-desc">Pay securely with cards, UPI, wallets & more</span>
+                </div>
+                <div class="payment-method-badge">
+                  <i class="fa-solid fa-check-circle"></i>
+                </div>
+              </div>
+              <div class="payment-method-features">
+                <div class="payment-feature">
+                  <i class="fa-solid fa-lock"></i>
+                  <span>256-bit SSL Encryption</span>
+                </div>
+                <div class="payment-feature">
+                  <i class="fa-solid fa-clock"></i>
+                  <span>Instant Processing</span>
+                </div>
+                <div class="payment-feature">
+                  <i class="fa-solid fa-undo"></i>
+                  <span>Easy Refunds</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="checkout-trust-badges">
+            <div class="trust-badge">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>Secure Payment</span>
+            </div>
+            <div class="trust-badge">
+              <i class="fa-solid fa-lock"></i>
+              <span>SSL Secured</span>
+            </div>
+            <div class="trust-badge">
+              <i class="fa-solid fa-bolt"></i>
+              <span>Fast Checkout</span>
+            </div>
+          </div>
+
           <button type="submit" class="btn btn-primary checkout-place-btn" id="place-order-btn">
             <i class="fa-solid fa-lock"></i> Place Order — ${OrderService.formatCurrency(totals.total)}
           </button>
