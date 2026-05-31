@@ -2,7 +2,7 @@
 // SwiftCart Auth Session (Navbar + Token)
 // ==========================================
 
-const AUTH_API_URL = 'http://localhost:5000/api';
+const AUTH_API_URL = 'https://swift-cart-ecommerce.onrender.com/api';
 
 document.addEventListener('DOMContentLoaded', () => {
   bootstrapAuthSession();

@@ -1,5 +1,5 @@
 window.PaymentService = {
-  API_URL: 'http://localhost:5000/api/payment',
+  API_URL: 'https://swift-cart-ecommerce.onrender.com/api/payment',
 
   getAuthHeaders() {
     const token = localStorage.getItem('token');

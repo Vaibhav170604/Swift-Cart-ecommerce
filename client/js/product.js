@@ -2,7 +2,7 @@
 // SwiftCart Product Details Logic
 // ==========================================
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://swift-cart-ecommerce.onrender.com/api';
 let currentProduct = null;
 
 document.addEventListener('DOMContentLoaded', () => {

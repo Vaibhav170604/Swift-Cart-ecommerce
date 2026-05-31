@@ -2,7 +2,7 @@
 // SwiftCart Authentication Logic
 // ==========================================
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://swift-cart-ecommerce.onrender.com/api';
 
 document.addEventListener('DOMContentLoaded', async () => {
   initTheme();

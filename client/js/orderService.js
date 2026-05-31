@@ -3,7 +3,7 @@
 // ==========================================
 
 const OrderService = {
-  API_URL: 'http://localhost:5000/api',
+  API_URL: 'https://swift-cart-ecommerce.onrender.com/api',
   SHIPPING_COST: 5.99,
   FREE_SHIPPING_MIN: 50,
   TAX_RATE: 0.08,

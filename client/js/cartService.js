@@ -3,7 +3,7 @@
 // ==========================================
 
 const CartService = {
-  API_URL: 'http://localhost:5000/api',
+  API_URL: 'https://swift-cart-ecommerce.onrender.com/api',
   GUEST_KEY: 'cart',
 
   isAuthenticated() {

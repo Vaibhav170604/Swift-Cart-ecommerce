@@ -3,7 +3,7 @@
 // ==========================================
 
 const ProfileService = {
-  API_URL: 'http://localhost:5000/api',
+  API_URL: 'https://swift-cart-ecommerce.onrender.com/api',
 
   getAuthHeaders() {
     const token = localStorage.getItem('token');

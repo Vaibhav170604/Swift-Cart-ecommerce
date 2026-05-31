@@ -5,7 +5,7 @@
 
 // ==========================================
 console.log('wishlistService loaded');
-const WISHLIST_API_URL = 'http://localhost:5000/api';
+const WISHLIST_API_URL = 'https://swift-cart-ecommerce.onrender.com/api';
 
 const WishlistService = {
   // Get user's wishlist
