@@ -301,7 +301,7 @@ async function handlePlaceOrder(e) {
 
         console.log('Razorpay Order:', razorpayOrder);
        const options = {
-              key: process.env.RAZORPAY_KEY_ID,
+              key: 'rzp_test_Sw28VwJn0n9W7z',
               amount: razorpayOrder.amount,
               currency: razorpayOrder.currency,
               name: 'Swift Cart',
